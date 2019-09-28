@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Paywall</title>
+    <link rel='stylesheet' href='/styles/main.css' />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <div>
+      <h1>Paywall test</h1>
+      <div>
+        <img src="https://picsum.photos/280/320?random=4"  width="480" height="320" />
+      </div>
+    </div>
+    <form action ="/main" method=="POST">
+      <script
+        src="https://checkout.stripe.com/checkout.js" class = "stripe-button"
+        data-key="<%= api_key %>"
+        data-amount = "500"
+        data-name = "Demo Site"
+        data-description = "Widget"
+        data-image = "https://stripe.com/img/documentation/checkout/marketplace.png"
+        data-locale = "auto" >
+      </script>
+    </form>
+  </body>
+</html>
